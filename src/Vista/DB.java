@@ -463,7 +463,6 @@ public class DB extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         tableProveedores2 = new javax.swing.JTable();
         jLabel16 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1929,8 +1928,6 @@ public class DB extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         jLabel16.setText("EMPRESA EAM");
 
-        jLabel41.setText("jLabel41");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1939,21 +1936,14 @@ public class DB extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1747, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 40, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(714, 714, 714)
-                        .addComponent(jLabel16))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(356, 356, 356)
-                        .addComponent(jLabel41)))
+                .addGap(714, 714, 714)
+                .addComponent(jLabel16)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel41)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(35, 35, 35)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3013,7 +3003,6 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;

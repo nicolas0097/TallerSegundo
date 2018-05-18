@@ -416,6 +416,7 @@ public class DB extends javax.swing.JFrame {
         jLabel51 = new javax.swing.JLabel();
         txtFiltro = new javax.swing.JTextField();
         jLabel52 = new javax.swing.JLabel();
+        btnCancelarPedido = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         txtRFCProveedor = new javax.swing.JTextField();
@@ -1395,6 +1396,14 @@ public class DB extends javax.swing.JFrame {
         jLabel52.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel52.setText("Filtrar por:");
 
+        btnCancelarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnCancelarPedido.setText("Cancelar");
+        btnCancelarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarPedidoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -1423,13 +1432,15 @@ public class DB extends javax.swing.JFrame {
                                         .addGap(77, 77, 77)
                                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                                .addComponent(btnGuardarPedido)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnBuscarPedido))
-                                            .addGroup(jPanel15Layout.createSequentialGroup()
                                                 .addComponent(btnModificarPedido)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(btnEliminarPedido))))))
+                                                .addComponent(btnEliminarPedido))
+                                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addComponent(btnGuardarPedido)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnBuscarPedido)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnCancelarPedido))))))
                             .addComponent(jLabel52)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1288, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel15Layout.createSequentialGroup()
@@ -1497,14 +1508,15 @@ public class DB extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnGuardarPedido)
-                            .addComponent(btnBuscarPedido))
+                            .addComponent(btnBuscarPedido)
+                            .addComponent(btnCancelarPedido))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnModificarPedido)
                             .addComponent(btnEliminarPedido))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(206, 206, 206))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(166, 166, 166))
         );
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -1983,16 +1995,23 @@ public class DB extends javax.swing.JFrame {
         java.util.Date fecha = new Date();
         java.sql.Date fecha2 = new java.sql.Date(fecha.getYear(), fecha.getMonth(), fecha.getDay());
         for (int i = 0; i < tablePedido2.getRowCount(); i++) {
-            precio = precio + (Double.parseDouble((String) tablePedido2.getValueAt(i, 4)) * Double.parseDouble((String) tablePedido2.getValueAt(i, 0)));
+            precio = precio + (Double.parseDouble((String) tablePedido2.getValueAt(i, 4)) * Double.parseDouble((String) tablePedido2.getValueAt(i, 5)));
 
         }
+        if(precio==0){
+        JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
+        }
+        else{
         ctlPedido.solicitudGuardar(fecha2, precio);
         int id_pedido = ctlPedido.solicitudIdPedido(fecha2, precio);
         for (int i = 0; i < tablePedido2.getRowCount(); i++) {
             int cantidad = Integer.parseInt(tablePedido2.getValueAt(i, 5) + "");
             ctlPedido.solicitudGuardarDetalle(Integer.parseInt((String) tablePedido2.getValueAt(i, 0)), id_pedido, cantidad);
+            txtValorPedido.setText(0 + "");
+        }
         }
         listarPedidos(); 
+        LimpiarPedidos();
     }//GEN-LAST:event_btnGuardarPedidoActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -2002,7 +2021,7 @@ public class DB extends javax.swing.JFrame {
             model.removeRow(tablePedido2.getSelectedRow());
         }
 
-        tablePedido2.setModel(model);        // TODO add your handling code here:
+        tablePedido2.setModel(model);        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void BtnAgregarAlPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarAlPedidoActionPerformed
@@ -2687,6 +2706,11 @@ public class DB extends javax.swing.JFrame {
        listarPedidos();
     }//GEN-LAST:event_btnModificarPedidoActionPerformed
 
+    private void btnCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPedidoActionPerformed
+        LimpiarPedidos();
+        txtValorPedido.setText(0 + "");
+    }//GEN-LAST:event_btnCancelarPedidoActionPerformed
+
     private void listarClientes() {
         tableClientes2.setModel(ctlCliente.SolicitudListar());
     }
@@ -2702,6 +2726,18 @@ public class DB extends javax.swing.JFrame {
     private void listarPedidos() {
         tablapedido.setModel(ctlPedido.solicitudListar());
     }
+    
+    private void LimpiarPedidos() {
+    DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+            model.removeRow(i);
+            i-=1;
+        }
+
+        tablePedido2.setModel(model); 
+    }
+        
 
     public boolean ObtenerValorDesempleado() {
         boolean des = false;
@@ -2928,6 +2964,7 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarPedido;
     private javax.swing.JButton btnBuscarProducto;
     private javax.swing.JButton btnBuscarProveedor;
+    private javax.swing.JButton btnCancelarPedido;
     private javax.swing.JButton btnEliminarCliente;
     private javax.swing.JButton btnEliminarPedido;
     private javax.swing.JButton btnEliminarProducto;

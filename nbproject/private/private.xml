@@ -13,11 +13,14 @@
             <file>file:/C:/Users/Cristian%20Sabogal%20L/Desktop/PropuestaDB/src/Controlador/CtlProveedor.java</file>
         </group>
         <group name="las mas hp">
-            <file>file:/C:/Users/XgioserX/Desktop/Desarrollo/taller%20segundo/src/DAO/ClienteDAO.java</file>
-            <file>file:/C:/Users/XgioserX/Desktop/Desarrollo/taller%20segundo/src/DAO/ProveedorDAO.java</file>
-            <file>file:/C:/Users/XgioserX/Desktop/Desarrollo/taller%20segundo/src/DAO/PedidoDAO.java</file>
-            <file>file:/C:/Users/XgioserX/Desktop/Desarrollo/taller%20segundo/src/DAO/ProductoDAO.java</file>
-            <file>file:/C:/Users/XgioserX/Desktop/Desarrollo/taller%20segundo/src/Vista/DB.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/recursos/TrallerSegundo.sql</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/Controlador/CtlPedido.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/DAO/ProductoDAO.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/DAO/PedidoDAO.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/DAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/Controlador/CtlCliente.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/Vista/DB.java</file>
+            <file>file:/C:/Users/XgioserX/Documents/GitHub/TallerSegundo/TallerSegundo/src/Controlador/CtlProducto.java</file>
         </group>
     </open-files>
 </project-private>

@@ -2159,7 +2159,7 @@ public class DB extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarPedidoActionPerformed
 
     private void btnGuardarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPedidoActionPerformed
-        int id_proveedor = ctlProveedor.solicitudId((String) cbProveedoresPedido.getSelectedItem());
+
         double precio = 0;
         
         java.util.Date fecha = new Date();
@@ -2171,7 +2171,7 @@ public class DB extends javax.swing.JFrame {
         if (precio == 0) {
             JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
         } else {
-            ctlPedido.solicitudGuardar(fecha2, precio);
+            ctlPedido.solicitudGuardar(precio);
             int id_pedido = ctlPedido.solicitudIdPedido(fecha2, precio);
             for (int i = 0; i < tablePedido2.getRowCount(); i++) {
                 int cantidad = Integer.parseInt(tablePedido2.getValueAt(i, 5) + "");

@@ -83,17 +83,17 @@ on delete cascade
 on update cascade
 );
 
-create table ventas(
-id_venta integer(11),
-id_cliente integer(11)not null,
-fecha date not null,
-precio double not null,
-primary key(id_venta),
-foreign key(id_cliente)
-references clientes(id_cliente)
-on delete cascade
-on update cascade
+CREATE TABLE tallerSegundo.ventas(
+idVenta int(11),
+fecha_venta varchar(13),
+hora_enta varchar(13),
+valor_venta int(10),
+cliente int(11),
+primary key(idVenta),
+foreign key(cliente) references tallerSegundo.clientes(id_cliente)
 );
+ALTER TABLE tallerSegundo.ventas
+CHANGE COLUMN idVenta idVenta INT(11) NOT NULL AUTO_INCREMENT ;
 
 create table detalle_ventas(
 id_producto integer(11)not null,

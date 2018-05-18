@@ -1,0 +1,11 @@
+-en gestiones poner los import
+-poner campos obligatorios necesarios
+-poblacion cambiar a departamento
+-todos los campos de combos en tablas 
+-asterisco * en campos obligatorios
+-boton que se llame nuevo que limpioe campos para ingresar nuevo usuario e inhabilite los otros botones botones 
+y boton cancelar para habilitar los botones qu ese inhabilitaron
+-pedido; el fitro por noimbre arreglarlo para que busque solo los de combo de proevedpr
+-nombre, catidad y precio y debajo el total automatico que vaya sumando
+-cambiar guardar por finalizar pedido.
+

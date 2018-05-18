@@ -223,5 +223,22 @@ public class ProductoDAO extends ClsConexion {
         }
         return 0;
     }
+    public ClsProducto buscarPre(String nombre) {
+        String consulta = "select precio_unidad from tallerExcel.productos where nombre='" + nombre + "'";
+        super.ejecutarRetorno(consulta);
+        try {
+            if (resultadoDB.next()) {
+                System.out.println("entro buscar");
+               dao.setPrecio(resultadoDB.getInt("precio_unidad"));
+                
+               
+                
+                
+            }
+        } catch (SQLException ex) {
+            System.out.println("Esto se tosto buscar");
+        }
+        return dao;
+    }
 
 }

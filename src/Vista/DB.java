@@ -401,7 +401,6 @@ public class DB extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         tablapedido = new javax.swing.JTable();
-        btnCalcularPedido = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
         btnGuardarPedido = new javax.swing.JButton();
         btnBuscarPedido = new javax.swing.JButton();
@@ -1304,14 +1303,6 @@ public class DB extends javax.swing.JFrame {
         ));
         jScrollPane9.setViewportView(tablapedido);
 
-        btnCalcularPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnCalcularPedido.setText("Calcular total pedido");
-        btnCalcularPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularPedidoActionPerformed(evt);
-            }
-        });
-
         jLabel45.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel45.setText("Total:");
 
@@ -1409,27 +1400,45 @@ public class DB extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                        .addComponent(jLabel49)
+                        .addGap(537, 537, 537)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel50)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(BtnAgregarAlPedido)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel45)
+                                .addGap(29, 29, 29)
+                                .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(1063, Short.MAX_VALUE))
+            .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(57, 57, 57)
+                        .addComponent(jLabel48)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(BtnListarPedidos)
                                 .addGroup(jPanel15Layout.createSequentialGroup()
-                                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                                            .addComponent(jLabel46)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(cbCategoriaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(btnCalcularPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(24, 24, 24))
-                                        .addGroup(jPanel15Layout.createSequentialGroup()
-                                            .addGap(310, 310, 310)
-                                            .addComponent(jLabel45)
-                                            .addGap(29, 29, 29)
-                                            .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(jLabel46)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cbCategoriaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(253, 253, 253)
                                     .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel15Layout.createSequentialGroup()
                                             .addComponent(btnGuardarPedido)
@@ -1438,39 +1447,16 @@ public class DB extends javax.swing.JFrame {
                                         .addGroup(jPanel15Layout.createSequentialGroup()
                                             .addComponent(btnModificarPedido)
                                             .addGap(18, 18, 18)
-                                            .addComponent(btnEliminarPedido))))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
-                                    .addGap(56, 56, 56)
-                                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(btnEliminarPedido)))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
                                 .addGap(662, 662, 662)
                                 .addComponent(jLabel51)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel15Layout.createSequentialGroup()
-                                        .addComponent(jLabel49)
-                                        .addGap(302, 302, 302))
-                                    .addGroup(jPanel15Layout.createSequentialGroup()
-                                        .addComponent(jLabel48)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel15Layout.createSequentialGroup()
-                                        .addGap(263, 263, 263)
-                                        .addComponent(jLabel50))
-                                    .addGroup(jPanel15Layout.createSequentialGroup()
-                                        .addGap(273, 273, 273)
-                                        .addComponent(BtnAgregarAlPedido)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(51, 51, 51)
-                                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1582, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(935, Short.MAX_VALUE))
+                .addContainerGap(872, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1485,42 +1471,42 @@ public class DB extends javax.swing.JFrame {
                         .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnGuardarPedido)
-                            .addComponent(btnBuscarPedido)
-                            .addComponent(btnCalcularPedido))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(jLabel49)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnModificarPedido)
-                            .addComponent(btnEliminarPedido)
-                            .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel45))
-                        .addGap(18, 18, 18)
-                        .addComponent(BtnListarPedidos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel49)
-                                    .addComponent(jLabel50))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(52, 52, 52))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGap(111, 111, 111)
-                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(BtnAgregarAlPedido)
-                                    .addComponent(jButton6))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel46)
                             .addComponent(cbCategoriaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(115, 115, 115)))
+                        .addGap(115, 115, 115))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel50)
+                                .addGap(88, 88, 88))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(BtnAgregarAlPedido)
+                                    .addComponent(jButton6))))
+                        .addGap(147, 147, 147)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnGuardarPedido)
+                            .addComponent(btnBuscarPedido)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel45)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnModificarPedido)
+                            .addComponent(btnEliminarPedido))
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnListarPedidos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(164, 164, 164))
         );
@@ -1936,18 +1922,18 @@ public class DB extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1747, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 40, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(714, 714, 714)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel16)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -2014,15 +2000,6 @@ public class DB extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnGuardarPedidoActionPerformed
 
-    private void btnCalcularPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularPedidoActionPerformed
-        double precio = 0;
-        for (int i = 0; i < tablePedido2.getRowCount(); i++) {
-            precio = precio + (Double.parseDouble((String) tablePedido2.getValueAt(i, 4)) * Double.parseDouble((String) tablePedido2.getValueAt(i, 0)));
-
-        }
-        txtValorPedido.setText(precio + "");
-    }//GEN-LAST:event_btnCalcularPedidoActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
 
@@ -2036,16 +2013,23 @@ public class DB extends javax.swing.JFrame {
     private void BtnAgregarAlPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarAlPedidoActionPerformed
         DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
         DefaultTableModel model2 = (DefaultTableModel) tablePedido1.getModel();
-        int cantidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad"));
+        String cantidad = JOptionPane.showInputDialog(null, "Cantidad");
         model.addRow(new Object[]{
             model2.getValueAt(tablePedido1.getSelectedRow(), 0) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 1) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 2) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 3) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 4) + "",
-            cantidad
+            cantidad+""
         });
         tablePedido2.setModel(model);
+        
+         double precio = 0;
+        
+        for (int i = 0; i < tablePedido2.getRowCount(); i++) {
+            precio = precio + (Double.parseDouble((String) tablePedido2.getValueAt(i, 4)) * Integer.parseInt((String)tablePedido2.getValueAt(i, 5)));
+        }
+        txtValorPedido.setText(precio + "");
     }//GEN-LAST:event_BtnAgregarAlPedidoActionPerformed
 
     private void cbProveedoresPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProveedoresPedidoActionPerformed
@@ -2946,7 +2930,6 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarPedido;
     private javax.swing.JButton btnBuscarProducto;
     private javax.swing.JButton btnBuscarProveedor;
-    private javax.swing.JButton btnCalcularPedido;
     private javax.swing.JButton btnEliminarCliente;
     private javax.swing.JButton btnEliminarPedido;
     private javax.swing.JButton btnEliminarProducto;

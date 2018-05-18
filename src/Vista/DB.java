@@ -404,7 +404,6 @@ public class DB extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         btnGuardarPedido = new javax.swing.JButton();
         btnBuscarPedido = new javax.swing.JButton();
-        btnModificarPedido = new javax.swing.JButton();
         btnEliminarPedido = new javax.swing.JButton();
         txtValorPedido = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
@@ -1325,14 +1324,6 @@ public class DB extends javax.swing.JFrame {
             }
         });
 
-        btnModificarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnModificarPedido.setText("Modificar");
-        btnModificarPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarPedidoActionPerformed(evt);
-            }
-        });
-
         btnEliminarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnEliminarPedido.setText("Eliminar");
         btnEliminarPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -1381,7 +1372,7 @@ public class DB extends javax.swing.JFrame {
         jScrollPane13.setViewportView(tablePedido2);
 
         jLabel51.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel51.setText("Nombre");
+        jLabel51.setText("Nombre:");
 
         txtFiltro.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txtFiltro.addActionListener(new java.awt.event.ActionListener() {
@@ -1434,8 +1425,7 @@ public class DB extends javax.swing.JFrame {
                                         .addGap(77, 77, 77)
                                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                                .addComponent(btnModificarPedido)
-                                                .addGap(18, 18, 18)
+                                                .addGap(103, 103, 103)
                                                 .addComponent(btnEliminarPedido))
                                             .addGroup(jPanel15Layout.createSequentialGroup()
                                                 .addComponent(btnGuardarPedido)
@@ -1449,17 +1439,19 @@ public class DB extends javax.swing.JFrame {
                         .addGap(57, 57, 57)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cbCategoriaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(jLabel48)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addComponent(jLabel51)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGap(18, 18, 18)
-                                .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtFiltro, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                                    .addComponent(cbCategoriaPedido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -1513,9 +1505,7 @@ public class DB extends javax.swing.JFrame {
                             .addComponent(btnBuscarPedido)
                             .addComponent(btnCancelarPedido))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnModificarPedido)
-                            .addComponent(btnEliminarPedido))))
+                        .addComponent(btnEliminarPedido)))
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(166, 166, 166))
@@ -1991,7 +1981,6 @@ public class DB extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarPedidoActionPerformed
 
     private void btnGuardarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPedidoActionPerformed
-        int id_proveedor = ctlProveedor.solicitudId((String) cbProveedoresPedido.getSelectedItem());
         double precio = 0;
 
         java.util.Date fecha = new Date();
@@ -2004,7 +1993,7 @@ public class DB extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
         }
         else{
-        ctlPedido.solicitudGuardar(fecha2, precio);
+        ctlPedido.solicitudGuardar(precio);
         int id_pedido = ctlPedido.solicitudIdPedido(fecha2, precio);
         for (int i = 0; i < tablePedido2.getRowCount(); i++) {
             int cantidad = Integer.parseInt(tablePedido2.getValueAt(i, 5) + "");
@@ -2029,7 +2018,7 @@ public class DB extends javax.swing.JFrame {
     private void BtnAgregarAlPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarAlPedidoActionPerformed
         DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
         DefaultTableModel model2 = (DefaultTableModel) tablePedido1.getModel();
-        String cantidad = JOptionPane.showInputDialog(null, "Cantidad");
+        String cantidad = JOptionPane.showInputDialog(null, "Cantidad a pedir");
         model.addRow(new Object[]{
             model2.getValueAt(tablePedido1.getSelectedRow(), 0) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 1) + "",
@@ -2704,10 +2693,6 @@ public class DB extends javax.swing.JFrame {
         listarProductos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void btnModificarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPedidoActionPerformed
-       listarPedidos();
-    }//GEN-LAST:event_btnModificarPedidoActionPerformed
-
     private void btnCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPedidoActionPerformed
         LimpiarPedidos();
         txtValorPedido.setText(0 + "");
@@ -2731,12 +2716,10 @@ public class DB extends javax.swing.JFrame {
     
     private void LimpiarPedidos() {
     DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
-
         for (int i = 0; i < model.getRowCount(); i++) {
             model.removeRow(i);
             i-=1;
         }
-
         tablePedido2.setModel(model); 
     }
         
@@ -2976,7 +2959,6 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarProducto;
     private javax.swing.JButton btnGuardarProveedor;
     private javax.swing.JButton btnModificarCliente;
-    private javax.swing.JButton btnModificarPedido;
     private javax.swing.JButton btnModificarProducto;
     private javax.swing.JButton btnModificarProveedor;
     private javax.swing.JComboBox<String> cbCategoriaPedido;

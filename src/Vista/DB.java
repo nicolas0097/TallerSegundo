@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 //bhb
 package Vista;
 
 //7knsdknkdsnknds
+=======
+package Vista;
+
+>>>>>>> 19d65251f803a7e84cf7bb2e6e7a20785a5edad5
 /**
  *
  * @author Cristian Sabogal L

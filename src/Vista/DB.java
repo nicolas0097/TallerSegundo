@@ -1,8 +1,4 @@
-//bhb
-
 package Vista;
-
-//7knsdknkdsnknds
 
 /**
  *

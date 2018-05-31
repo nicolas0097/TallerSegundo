@@ -34,6 +34,21 @@ ClsProducto pro = new ClsProducto();
             return false;
         }
     }
+    public boolean eliminar(){
+        try{
+            for (int i = 0; i < venta.size(); i++) {
+                venta.remove(i);
+                i-=1;
+                
+            }
+            return true;
+            
+        }catch(Exception e){
+            
+        }
+    return false;
+        
+    }
 
     public DefaultTableModel listarVenta() {
 

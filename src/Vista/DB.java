@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-//bhb
+
 package Vista;
 
-//7knsdknkdsnknds
-=======
-package Vista;
 
->>>>>>> 19d65251f803a7e84cf7bb2e6e7a20785a5edad5
+
 /**
  *
  * @author Cristian Sabogal L
@@ -467,8 +463,6 @@ public class DB extends javax.swing.JFrame {
         tablapedido = new javax.swing.JTable();
         jLabel45 = new javax.swing.JLabel();
         btnGuardarPedido = new javax.swing.JButton();
-        btnBuscarPedido = new javax.swing.JButton();
-        btnModificarPedido = new javax.swing.JButton();
         btnEliminarPedido = new javax.swing.JButton();
         txtValorPedido = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
@@ -1733,22 +1727,6 @@ public class DB extends javax.swing.JFrame {
             }
         });
 
-        btnBuscarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnBuscarPedido.setText("Buscar");
-        btnBuscarPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarPedidoActionPerformed(evt);
-            }
-        });
-
-        btnModificarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnModificarPedido.setText("Modificar");
-        btnModificarPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarPedidoActionPerformed(evt);
-            }
-        });
-
         btnEliminarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnEliminarPedido.setText("Eliminar");
         btnEliminarPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -1768,6 +1746,11 @@ public class DB extends javax.swing.JFrame {
         cbCategoriaPedido.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbCategoriaPedidoItemStateChanged(evt);
+            }
+        });
+        cbCategoriaPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCategoriaPedidoActionPerformed(evt);
             }
         });
 
@@ -1848,17 +1831,11 @@ public class DB extends javax.swing.JFrame {
                                         .addGap(29, 29, 29)
                                         .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(77, 77, 77)
-                                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                                .addComponent(btnModificarPedido)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnEliminarPedido))
-                                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                                .addComponent(btnGuardarPedido)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnBuscarPedido)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnCancelarPedido))))))
+                                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(btnGuardarPedido)
+                                            .addComponent(btnEliminarPedido))
+                                        .addGap(24, 24, 24)
+                                        .addComponent(btnCancelarPedido))))
                             .addComponent(jLabel52)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1288, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel15Layout.createSequentialGroup()
@@ -1889,7 +1866,7 @@ public class DB extends javax.swing.JFrame {
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel48)
                             .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 307, Short.MAX_VALUE))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1901,7 +1878,7 @@ public class DB extends javax.swing.JFrame {
                             .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                                .addGap(0, 6, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel50)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1926,13 +1903,10 @@ public class DB extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnGuardarPedido)
-                            .addComponent(btnBuscarPedido)
                             .addComponent(btnCancelarPedido))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnModificarPedido)
-                            .addComponent(btnEliminarPedido))))
-                .addGap(20, 20, 20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEliminarPedido)))
+                .addGap(32, 32, 32)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(166, 166, 166))
         );
@@ -2156,12 +2130,6 @@ public class DB extends javax.swing.JFrame {
         listarPedidos();
     }//GEN-LAST:event_btnEliminarPedidoActionPerformed
 
-    private void btnBuscarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPedidoActionPerformed
-        int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el id del pedido"));
-        tablapedido.setModel(ctlPedido.solicituBuscar(id));
-        listarPedidos();        
-    }//GEN-LAST:event_btnBuscarPedidoActionPerformed
-
     private void btnGuardarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPedidoActionPerformed
         int id_proveedor = ctlProveedor.solicitudId((String) cbProveedoresPedido.getSelectedItem());
         double precio = 0;
@@ -2175,7 +2143,7 @@ public class DB extends javax.swing.JFrame {
         if (precio == 0) {
             JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
         } else {
-            ctlPedido.solicitudGuardar(fecha2, precio);
+            ctlPedido.solicitudGuardar(precio);
             int id_pedido = ctlPedido.solicitudIdPedido(fecha2, precio);
             for (int i = 0; i < tablePedido2.getRowCount(); i++) {
                 int cantidad = Integer.parseInt(tablePedido2.getValueAt(i, 5) + "");
@@ -2875,10 +2843,6 @@ public class DB extends javax.swing.JFrame {
         listarProductos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void btnModificarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPedidoActionPerformed
-        listarPedidos();
-    }//GEN-LAST:event_btnModificarPedidoActionPerformed
-
     private void btnCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPedidoActionPerformed
         LimpiarPedidos();
         txtValorPedido.setText(0 + "");
@@ -2915,6 +2879,9 @@ public class DB extends javax.swing.JFrame {
         ctlVe.SolicitudGuardar(0, fechaD, hora_pedido, precio, cliente);
         veDAO.listarVenta1();
         LimpiarVenta();
+        if(veDAO.eliminar()){
+            System.out.println("eliminado");
+        }
         cbProductos.setEnabled(false);
         btnAgre.setEnabled(false);
         btnEnv.setEnabled(false);
@@ -2944,6 +2911,10 @@ public class DB extends javax.swing.JFrame {
         FrmRegistro frmRegistro = new FrmRegistro();
         frmRegistro.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void cbCategoriaPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCategoriaPedidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbCategoriaPedidoActionPerformed
     
     private void listarClientes() {
         tableClientes2.setModel(ctlCliente.SolicitudListar());
@@ -3194,7 +3165,6 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JCheckBox ChckEditarProveedor;
     private javax.swing.JButton btnAgre;
     private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnBuscarPedido;
     private javax.swing.JButton btnBuscarProducto;
     private javax.swing.JButton btnBuscarProveedor;
     private javax.swing.JButton btnCancelarPedido;
@@ -3208,7 +3178,6 @@ public class DB extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarProducto;
     private javax.swing.JButton btnGuardarProveedor;
     private javax.swing.JButton btnModificarCliente;
-    private javax.swing.JButton btnModificarPedido;
     private javax.swing.JButton btnModificarProducto;
     private javax.swing.JButton btnModificarProveedor;
     private javax.swing.JComboBox<String> cbCategoriaPedido;

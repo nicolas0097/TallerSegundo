@@ -17,9 +17,9 @@ public class CtlPedido {
     public CtlPedido() {
     }
     
-    public boolean solicitudGuardar( Date fecha, double precio){
+    public boolean solicitudGuardar(double precio){
         PedidoDAO pediDAO= new PedidoDAO();
-        return pediDAO.guardarPedido(  fecha, precio);
+        return pediDAO.guardarPedido(precio);
     }
      public boolean solicitudGuardarDetalle(int id_producto,int id_pedido, int cantidad){
         PedidoDAO pediDAO= new PedidoDAO();

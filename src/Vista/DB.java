@@ -406,6 +406,34 @@ public class DB extends javax.swing.JFrame {
         txtUnidadPedido = new javax.swing.JTextField();
         ChckEditarProducto = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
+<<<<<<< HEAD
+        jPanel14 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        cbProveedoresPedido = new javax.swing.JComboBox<>();
+        jLabel49 = new javax.swing.JLabel();
+        BtnAgregarAlPedido = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tablapedido = new javax.swing.JTable();
+        jLabel45 = new javax.swing.JLabel();
+        btnGuardarPedido = new javax.swing.JButton();
+        btnBuscarPedido = new javax.swing.JButton();
+        btnEliminarPedido = new javax.swing.JButton();
+        txtValorPedido = new javax.swing.JTextField();
+        jLabel46 = new javax.swing.JLabel();
+        cbCategoriaPedido = new javax.swing.JComboBox<>();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        tablePedido1 = new javax.swing.JTable();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        tablePedido2 = new javax.swing.JTable();
+        jLabel51 = new javax.swing.JLabel();
+        txtFiltro = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        btnCancelarPedido = new javax.swing.JButton();
+=======
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         txtRFCProveedor = new javax.swing.JTextField();
@@ -1310,6 +1338,225 @@ public class DB extends javax.swing.JFrame {
 
         txtPuestoContacto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
+<<<<<<< HEAD
+        btnEliminarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnEliminarPedido.setText("Eliminar");
+        btnEliminarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarPedidoActionPerformed(evt);
+            }
+        });
+=======
+        txtTelefonoContactoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtTelefonoContactoProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoContactoProveedorActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel22.setText("Correo");
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
+
+        txtMovilContactoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel23.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel23.setText("Web");
+
+        txtCorreoContactoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel24.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel24.setText("Contacto");
+
+        txtTelefonoAlternativoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel25.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel25.setText("Puesto Contacto");
+
+        txtSegundoTelefonoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+<<<<<<< HEAD
+        jLabel51.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel51.setText("Nombre:");
+=======
+        jLabel26.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel26.setText("Telefono Contacto");
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
+
+        txtCantidadCompradasProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel27.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel27.setText("Movil Contacto");
+
+<<<<<<< HEAD
+        btnCancelarPedido.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnCancelarPedido.setText("Cancelar");
+        btnCancelarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarPedidoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel49))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BtnAgregarAlPedido)
+                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(34, 34, 34)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel50)
+                                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel45)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(77, 77, 77)
+                                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addGap(103, 103, 103)
+                                                .addComponent(btnEliminarPedido))
+                                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addComponent(btnGuardarPedido)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnBuscarPedido)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnCancelarPedido))))))
+                            .addComponent(jLabel52)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 1288, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel48)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtFiltro, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                                    .addComponent(cbCategoriaPedido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel52)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel48)
+                            .addComponent(cbProveedoresPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel46)
+                            .addComponent(cbCategoriaPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel51)
+                            .addComponent(txtFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                .addGap(0, 6, Short.MAX_VALUE)
+                                .addComponent(jLabel50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel49)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jButton6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(BtnAgregarAlPedido)
+                                        .addGap(105, 105, 105)))))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtValorPedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel45))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnGuardarPedido)
+                            .addComponent(btnBuscarPedido)
+                            .addComponent(btnCancelarPedido))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarPedido)))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(166, 166, 166))
+        );
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(596, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Pedido", jPanel14);
+
+        jPanel6.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        txtRFCProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel17.setText("Proveedora");
+
+        txtCorreoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel18.setText("Direccion");
+
+        txtWeb.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel19.setText("Telefono");
+
+        txtContactoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel20.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel20.setText("Fax");
+
+        jLabel21.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel21.setText("RFC:");
+
+        txtPuestoContacto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
         txtTelefonoContactoProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtTelefonoContactoProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1345,6 +1592,8 @@ public class DB extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel27.setText("Movil Contacto");
 
+=======
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
         txtCantidadPesosProveedor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         jLabel28.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -2131,14 +2380,32 @@ public class DB extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarPedidoActionPerformed
 
     private void btnGuardarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPedidoActionPerformed
-        int id_proveedor = ctlProveedor.solicitudId((String) cbProveedoresPedido.getSelectedItem());
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8a853854c4e35a60edd15371ff5e68946c5479ef
         double precio = 0;
         
         java.util.Date fecha = new Date();
         java.sql.Date fecha2 = new java.sql.Date(fecha.getYear(), fecha.getMonth(), fecha.getDay());
         for (int i = 0; i < tablePedido2.getRowCount(); i++) {
             precio = precio + (Double.parseDouble((String) tablePedido2.getValueAt(i, 4)) * Double.parseDouble((String) tablePedido2.getValueAt(i, 5)));
+<<<<<<< HEAD
+
+        }
+        if(precio==0){
+        JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
+        }
+        else{
+        ctlPedido.solicitudGuardar(precio);
+        int id_pedido = ctlPedido.solicitudIdPedido(fecha2, precio);
+        for (int i = 0; i < tablePedido2.getRowCount(); i++) {
+            int cantidad = Integer.parseInt(tablePedido2.getValueAt(i, 5) + "");
+            ctlPedido.solicitudGuardarDetalle(Integer.parseInt((String) tablePedido2.getValueAt(i, 0)), id_pedido, cantidad);
+            txtValorPedido.setText(0 + "");
+=======
             
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
         }
         if (precio == 0) {
             JOptionPane.showMessageDialog(null, "No hay productos seleccionados");
@@ -2168,7 +2435,7 @@ public class DB extends javax.swing.JFrame {
     private void BtnAgregarAlPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarAlPedidoActionPerformed
         DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
         DefaultTableModel model2 = (DefaultTableModel) tablePedido1.getModel();
-        String cantidad = JOptionPane.showInputDialog(null, "Cantidad");
+        String cantidad = JOptionPane.showInputDialog(null, "Cantidad a pedir");
         model.addRow(new Object[]{
             model2.getValueAt(tablePedido1.getSelectedRow(), 0) + "",
             model2.getValueAt(tablePedido1.getSelectedRow(), 1) + "",
@@ -2843,6 +3110,16 @@ public class DB extends javax.swing.JFrame {
         listarProductos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    private void btnModificarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPedidoActionPerformed
+        listarPedidos();
+    }//GEN-LAST:event_btnModificarPedidoActionPerformed
+
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
+>>>>>>> d03eaed0b2d73b467f395f9ff0f6602fdee0b389
     private void btnCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPedidoActionPerformed
         LimpiarPedidos();
         txtValorPedido.setText(0 + "");
@@ -2933,12 +3210,21 @@ public class DB extends javax.swing.JFrame {
     }
     
     private void LimpiarPedidos() {
+<<<<<<< HEAD
+    DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
+=======
         DefaultTableModel model = (DefaultTableModel) tablePedido2.getModel();
         
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
         for (int i = 0; i < model.getRowCount(); i++) {
             model.removeRow(i);
             i -= 1;
         }
+<<<<<<< HEAD
+        tablePedido2.setModel(model); 
+    }
+=======
+>>>>>>> 6b7b37f389e4c74d92fe452dcfdbd0a9d63e2080
         
         tablePedido2.setModel(model);        
     }

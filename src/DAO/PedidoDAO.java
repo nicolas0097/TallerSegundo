@@ -13,9 +13,18 @@ import javax.swing.table.DefaultTableModel;
 
 public class PedidoDAO extends ClsConexion {
 
+<<<<<<< HEAD
     public boolean guardarPedido(double precio) {
         String consulta = "insert into pedidos(fecha,precio) values ( sysdate()," + precio
                 + ")";
+=======
+<<<<<<< HEAD
+    public boolean guardarPedido( double precio) {
+=======
+    public boolean guardarPedido(double precio) {
+>>>>>>> 8a853854c4e35a60edd15371ff5e68946c5479ef
+        String consulta = "insert into pedidos(fecha,precio) values ( sysdate()," + precio+ ")";
+>>>>>>> d03eaed0b2d73b467f395f9ff0f6602fdee0b389
         return super.ejecutar(consulta);
     }
 
